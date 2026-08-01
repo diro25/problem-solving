@@ -27,3 +27,4 @@ resources/
 - Practice data structures and algorithms
 - Prepare for coding interviews
 - Track my programming progress
+  not only this and etc
