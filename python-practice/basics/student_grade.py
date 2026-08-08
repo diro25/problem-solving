@@ -15,3 +15,30 @@ GRADE_F = 40
 total_score = 0
 highest_score = float("-inf")
 lowest_score = float("inf")
+student_results = []
+
+for student in students:
+    name = student["name"]
+    score = student["score"]
+
+    # Determine letter grade using conditionals
+    if score >= GRADE_A:
+        grade = "A"
+    elif score >= GRADE_B:
+        grade = "B"
+    elif score >= GRADE_C:
+        grade = "C"
+    elif score >= GRADE_D:
+        grade = "D"
+    else:
+        grade = "F"
+
+    # Track statistics
+    total_score += score
+    if score > highest_score:
+        highest_score = score
+    if score < lowest_score:
+        lowest_score = score
+
+    # Store grade summary
+    student_results.append({"name": name, "score": score, "grade": grade})
