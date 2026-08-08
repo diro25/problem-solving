@@ -42,3 +42,5 @@ for student in students:
 
     # Store grade summary
     student_results.append({"name": name, "score": score, "grade": grade})
+    num_students = len(students)
+average_score = total_score / num_students if num_students > 0 else 0
