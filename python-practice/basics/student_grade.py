@@ -44,3 +44,13 @@ for student in students:
     student_results.append({"name": name, "score": score, "grade": grade})
     num_students = len(students)
 average_score = total_score / num_students if num_students > 0 else 0
+print("--- INDIVIDUAL STUDENT GRADES ---")
+for result in student_results:
+    # String operations to format output
+    print(f"Student: {result['name']:<10} | Score: {result['score']:<3} | Grade: {result['grade']}")
+
+print("\n--- CLASS SUMMARY STATISTICS ---")
+print(f"Total Students : {num_students}")
+print(f"Average Score  : {average_score:.2f}")
+print(f"Highest Score  : {highest_score}")
+print(f"Lowest Score   : {lowest_score}")
