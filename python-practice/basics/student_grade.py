@@ -1,9 +1,9 @@
 # Sample input data
 students = [
-    {"name": "Alice", "score": 88},
-    {"name": "Bob", "score": 92},
-    {"name": "Charlie", "score": 67},
-    {"name": "Diana", "score": 75},
+    {"name": "chala", "score": 88},
+    {"name": "diriba", "score": 92},
+    {"name": "fayo", "score": 67},
+    {"name": "sori", "score": 75},
 ]
 
 # Configurable grade thresholds
@@ -23,13 +23,13 @@ for student in students:
 
     # Determine letter grade using conditionals
     if score >= GRADE_A:
-        grade = "A"
+        grade = "A+"
     elif score >= GRADE_B:
-        grade = "B"
+        grade = "A"
     elif score >= GRADE_C:
-        grade = "C"
+        grade = "B"
     elif score >= GRADE_D:
-        grade = "D"
+        grade = "C"
     else:
         grade = "F"
 
