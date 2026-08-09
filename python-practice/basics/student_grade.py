@@ -7,11 +7,18 @@ students = [
 ]
 
 # Configurable grade thresholds
-GRADE_A = 90
-GRADE_B = 80
-GRADE_C = 70
-GRADE_D = 60
-GRADE_F = 40
+GRADE_A_PLUS = 90
+GRADE_A = 85
+GRADE_A_MINUS= 80
+GRADE_B_PLUS= 75
+GRADE_B = 70
+GRADE_B_MINUS = 65
+
+GRADE_C_PLUS= 60
+GRADE_C=50
+GRADE_C_MINUS=45
+GRADE_D = 40
+GRADE_F = 0
 total_score = 0
 highest_score = float("-inf")
 lowest_score = float("inf")
@@ -22,14 +29,26 @@ for student in students:
     score = student["score"]
 
     # Determine letter grade using conditionals
-    if score >= GRADE_A:
+    if score >= GRADE_A_PLUS:
         grade = "A+"
-    elif score >= GRADE_B:
+    elif score >= GRADE_A:
         grade = "A"
-    elif score >= GRADE_C:
+    elif score >= GRADE_A_MINUS:
+        grade = "A-"
+    elif score >= GRADE_B_PLUS:
+        grade = "B+"
+    elif score >= GRADE_B:
         grade = "B"
-    elif score >= GRADE_D:
+    elif score >= GRADE_B_MINUS:
+        grade = "B-"
+    elif score >= GRADE_C_PLUS:
+        grade = "C+"
+    elif score >= GRADE_C:
         grade = "C"
+    elif score >= GRADE_C_MINUS:
+        grade = "C-"
+    elif score >= GRADE_D:
+        grade = "D"
     else:
         grade = "F"
 
