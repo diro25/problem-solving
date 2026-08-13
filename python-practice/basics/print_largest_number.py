@@ -1,6 +1,6 @@
 n=int(input())
 nums=list(map(int,input().split()))
-max_val=0
+max_val=nums[0]
 max_num=0
 for i,num in enumerate(nums):
     if num>max_val:
